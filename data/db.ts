@@ -1,5 +1,4 @@
-{
-    "education":[
+export const education = [
         {
             "id": "1",
             "title": "Cavities",
@@ -25,4 +24,3 @@
             "read": "Read More"
         }
     ]
-}

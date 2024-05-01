@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
-import testimonials from '../data/ts.json'
+import {testimonial} from '../data/ts'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -21,7 +22,7 @@ export default function Testimonials() {
            }}
            modules={[Pagination]}
            className="mySwiper">
-            {testimonials.map((testimonial: any) => (
+            {testimonial.map((testimonial: any) => (
                 <SwiperSlide className="my-12" key={testimonial.id}>
                     <div className="grid place-items-center place-content-center lg:w-[60%] bg-white shadow-2xl lg:mx-[20%] py-10 px-2 md:p-10">
                         <img src={testimonial.img} alt="tsImg" className='relative w-14 h-14 rounded-[50%] -mt-20'/>

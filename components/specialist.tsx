@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
-import specialists from '../data/sp.json'
+import { specialist } from "@/data/sp"
 import Link from 'next/link';
 
 
@@ -37,13 +38,13 @@ export default function Specialists () {
            }}
            modules={[Pagination]}
            className="mySwiper">
-            {specialists.map(({id, name, area, img}) => (
-                <SwiperSlide className="mb-10" key={id}>
-                <Link href={`/detaisl/${id}`} passHref>
-                <img src={img} alt="spImg" className='w-[20rem] h-[20rem] rounded-tl-[20%] rounded-br-[20%]'/>
+            {specialist.map((specialist: any) => (
+                <SwiperSlide className="mb-10" key={specialist.id}>
+                <Link href={`/detaisl/${specialist.id}`} passHref>
+                <img src={specialist.img} alt="spImg" className='w-[20rem] h-[20rem] rounded-tl-[20%] rounded-br-[20%]'/>
                 <div className="md:text-center mt-6">
-                    <p className="text-md font-bold">{name}</p>
-                    <p className="text-xs">{area}</p>
+                    <p className="text-md font-bold">{specialist.name}</p>
+                    <p className="text-xs">{specialist.area}</p>
                 </div>
                 </Link>
                 </SwiperSlide>

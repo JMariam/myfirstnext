@@ -1,4 +1,4 @@
-[
+export const specialist = [
         {
             "id": "1",
             "img": "/sp1.jpg",

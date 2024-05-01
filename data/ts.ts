@@ -1,4 +1,4 @@
-[
+export const testimonial = [
     {
         "id": "1",
         "img": "/sp1.jpg",
